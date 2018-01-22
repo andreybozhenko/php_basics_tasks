@@ -1,22 +1,21 @@
 <?php
 
-$a = 1;
-$b = 3;
-$operator = "+" || "-" || "/" || "*" || "%";
-
-if ($operator = "+") {
-    echo $a+$b;
-} if ($operator = "-") {
-    echo $a-$b;
-} if ($operator = "/") {
-    echo $a/$b;
-} if ($operator = "*") {
-    echo $a/$b;
-} if ($operator = "%") {
-    echo $a%$b;
-} if ($b=0 && $a/$b){
-    echo ("error");
+if(isset($_POST['a']) && isset($_POST['b'])  ){
+    $a = $_POST['a'];
+    $b = $_POST['b'];
+    $operator = $_POST['select'];
+    switch ($operator){
+        case '+': echo "Ответ:",$a+$b;
+            break;
+        case '-': echo "Ответ:",$a-$b;
+            break;
+        case '*': echo "Ответ:",$a*$b;
+            break;
+        case '/': echo "Ответ:",$a/$b;
+            break;
+        case '%': echo "Ответ:",$a%$b;
+            break;
+        default: echo('Wrong!!!');
+    }
 }
-
-echo "Roman, pls help, didn't get it properly"
 ?>
