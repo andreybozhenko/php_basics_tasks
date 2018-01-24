@@ -1,9 +1,9 @@
 <?php
-
+/**
+ * Выведите результат сравнения $a и $b с помощью var_dump
+ */
 $a = '78';
 $b = 78;
-var_dump($a, $b);
+var_dump($a == $b);
 
-echo "Roman, didn't get it, pls help";
-
-?>
+//Будет bool (true)
